@@ -13,12 +13,15 @@
         Today id <%=day%>
     </h1>
     <ul>
-        <li>Buy food</li>
-        <li>Cook food</li>
+        <% for (var i=0; i<todo.length; i++){ %>
+            <li>
+                <%= todo[i] %>
+            </li>
+            <% } %>
     </ul>
     <form action="/" method="post">
         <input type="text" name="todo" placeholder="input your todo">
-        <input type="submit">
+        <button type="submit" name="button">Add</button>
     </form>
 </body>
 
